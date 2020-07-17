@@ -5,9 +5,7 @@ import (
 )
 
 func TestDecorator(t *testing.T) {
-	var p Person = &ConcretePerson{
-		name: "RockLd",
-	}
+	var p Person = NewConcretePerson("Rock")
 	p = NewBigTrouser(p)
 	p = NewTShirt(p)
 	p.Show()
